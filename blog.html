@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAA Baishnavi Traders And Suppliers</title>
+    <!-- Tailwind CSS CDN for modern, utility-first styling -->
+    
+            <link rel="stylesheet" href="style_css/style.css">
+            <link rel="stylesheet" href="style_css/sliding.css">
+            <link rel="stylesheet" href="style_css/water.css"> 
+            <link rel="stylesheet" href="style_css/snow.css">
+            <link rel="stylesheet" href="style_css/title.css">
+            <script src="style_js/img.js"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <script src="style_js/water.js"></script>
+            <script src="style_js/style.js"></script>
+    
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        * {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .slogan{
+          right: 2%;
+        }
+    </style>
+</head>
+<body class="bg-[#1a1a2e] min-h-screen overflow-y-auto">
+   
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#242440]/60 shadow-md rounded-b-xl p-4">
+        <div class="container mx-auto flex justify-between items-center">
+
+            <!-- Logo Section -->
+                  <img src="logo.png" alt="Company Logo"> 
+            <p class="slogan ml-0"><span class="Quality">Your Partner For </span> A Quality Home </p>
+            <!-- Desktop Navigation Menu -->
+            <ul id="desktop-nav" class="hidden md:flex items-center space-x-6 text-[#e0e0e0] font-medium">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Service</a></li>
+                <li><a href="#" class="nav-link">Product</a></li>
+                <li><a href="#" class="nav-link">Contact Us</a></li>
+                <li><a href="#" class="nav-link">Teams</a></li>
+                <li><a href="blog.html" class="nav-link">About Us</a></li
+            </ul>
+
+            <!-- Mobile-only Elements: About Us, "Menu" Text, and Hamburger Menu Icon -->
+            <div class="flex items-center md:hidden space-x-4">
+                <a href="#" class="text-sm font-medium text-[#e0e0e0] hover:text-[#64ffda] transition-colors duration-300">About Us</a>
+                <!-- Added "Menu" text here -->
+                <span class="text-sm font-medium text-[#e0e0e0]">Menu</span>
+                <button id="menu-button" class="focus:outline-none">
+                    <div class="hamburger-icon" id="hamburger">
+                        <span class="a"></span>
+                        <span class="b"></span>
+                        <span class="c"></span>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="h-screen overflow-y-auto">
+        <!-- Add margin-top to compensate for fixed navbar -->
+        <!-- Mobile Menu - This is initially hidden and slides in from the right -->
+        <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-64 p-6 transform translate-x-full mobile-menu md:hidden overflow-y-auto">
+            <div class="flex justify-end">
+                <!-- Close button for the mobile menu -->
+                <button id="close-menu-button" class="text-[#4b5563] hover:text-[#1f2937] focus:outline-none">
+                    <!-- X icon as an SVG for better styling -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu Links with individual rectangles -->
+            <div id="mobile-menu-links" class="flex flex-col space-y-4 mt-8">
+                <div class="mobile-menu-item"><a href="index.html" class="block w-full h-full flex items-center justify-center">Home</a></div>
+                <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Service</a></div>
+                <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Product</a></div>
+                <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Contact Us</a></div>
+                <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Team</a></div>
+                <div class="mobile-menu-item"><a href="blog.html" class="block w-full h-full flex items-center justify-center">About Us</a></div>
+            </div>
+        </div>
+
+        <!-- Backdrop overlay for the mobile menu -->
+        <div id="backdrop" class="fixed inset-0 z-40 hidden backdrop md:hidden"></div>
+
+        <canvas id="waterCanvas"></canvas>
+<section class="welcome-section">
+    <div class="welcome-ornament animate-pulse">✦</div>
+    <h1 class="animate-fade-right">The Exceptional Minds Behind Our Legacy</h1>
+    <div class="welcome-divider animate-expand-right">
+        <span class="divider-line"></span>
+        <span class="divider-symbol">❧</span>
+        <span class="divider-line"></span>
+    </div>
+    <p class="animate-fade-right">We take immense pride in presenting the distinguished individuals who form the cornerstone of our excellence. Each member brings forth unparalleled expertise and unwavering dedication, crafting innovations that transcend ordinary boundaries.</p>
+    <div class="welcome-ornament animate-pulse">✦</div>
+
+    <style>
+        /* Previous welcome-section styles remain unchanged */
+        .welcome-section {
+          position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 15vh;
+            width: 50%;
+            margin: 0 0 0 auto;
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            left: 25%;
+        }
+
+        .welcome-ornament {
+            font-size: 1.5rem;
+            color: #64ffda;
+            margin: 1rem 0;
+        }
+
+        .welcome-section h1 {
+            text-align: center;
+            width: 90%;
+            line-height: 1.2;
+            font-size: 2rem;
+            background: linear-gradient(120deg, black, black);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            margin: 15px 0;
+        }
+
+        .divider-line {
+            height: 2px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, transparent, black, transparent);
+        }
+
+        .divider-symbol {
+            margin: 0 10px;
+            color: black;
+            font-size: 1.2rem;
+        }
+
+        .welcome-section p {
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 1.5;
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .animate-fade-right {
+            animation: fadeRight 1s ease-out 0.3s backwards;
+        }
+
+        .animate-expand-right {
+            animation: expandRight 1.5s ease-out 0.6s backwards;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes expandRight {
+            from {
+                opacity: 0;
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+            to {
+                opacity: 1;
+                transform: scaleX(1);
+                transform-origin: right;
+            }
+        }
+    </style>
+</section>
+
+<!-- Previous team sections remain unchanged -->
+<section class="team-section" id="ceo">
+    <div class="team-member">
+      <div class="image-container">
+        <img src="photo1.jpg" alt="CEO" class="member-img">
+      </div>
+      <div class="content-container">
+        <h2>J</h2>
+        <h3>Chief Executive Officer</h3>
+        <p>Leading our company with over 20 years of industry experience and a vision for innovation. Driving sustainable growth and fostering a culture of excellence.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="team-section" id="ceo">
+    <div class="team-member">
+      <div class="image-container">
+        <img src="photo1.jpg" alt="CEO" class="member-img">
+      </div>
+      <div class="content-container">
+        <h2>Harshal</h2>
+        <h3>Managing Director</h3>
+        <p>Leading our company with over 20 years of industry experience and a vision for innovation. Driving sustainable growth and fostering a culture of excellence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section" id="developer">
+    <div class="team-member">
+      <div class="image-container">
+        <img src="photo2.jpg" alt="Developer" class="member-img">
+      </div>
+      <div class="content-container">
+        <h2>Shantiram Meche</h2>
+        <h3>Senior Developer</h3>
+        <p>Bringing technical excellence and creative solutions to our development processes. Passionate about creating innovative software solutions that drive business success.</p>
+      </div>
+    </div>
+  </section>
+  <!-- New Company Section -->
+  <section class="team-section" id="company">
+    <div class="team-member">
+      <div class="image-container">
+        <img src="company.jpg" alt="Company Building" class="member-img">
+      </div>
+      <div class="content-container">
+        <h2>MAA Baishnavi Traders And Suppliers</h2>
+        <h3>Your Trusted Partner Since 2000</h3>
+        <p>Founded in 2000, MAA Baishnavi Traders And Suppliers has grown to become a leading name in the industry. We specialize in providing high-quality products and exceptional service to our valued customers. Our commitment to excellence and innovation has helped us build lasting relationships with clients across the region. With state-of-the-art facilities and a dedicated team of professionals, we continue to set new standards in the industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll('.team-section');
+    let currentSection = 0;
+    
+    const observerOptions = {
+      root: null,
+      threshold: 0.3,
+      rootMargin: "0px"
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          entry.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    function autoSlide() {
+      currentSection = (currentSection + 1) % sections.length;
+      sections[currentSection].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    setInterval(autoSlide, 6000);
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+<style>
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #333333;
+      --text-color: #000000;
+      --accent-color: black;
+      --transition-timing: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      --glass-bg: rgba(255, 255, 255, 0.4);
+      --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      color: var(--text-color);
+    }
+
+    .team-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 120px;
+      opacity: 0;
+      transition: all 1.2s var(--transition-timing);
+      scroll-margin-top: 60px;
+      perspective: 1000px;
+    }
+
+    .team-section:nth-child(odd) {
+      transform: translateX(-100px) rotateY(-10deg);
+    }
+
+    .team-section:nth-child(even) {
+      transform: translateX(-20px) rotateY(10deg); /* Changed from 100px to -20px */
+    }
+
+    .team-section.visible {
+      opacity: 1;
+      transform: translateX(0) rotateY(0);
+    }
+
+    .team-member {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      background: var(--glass-bg);
+      padding: 50px;
+      border-radius: 20px;
+      border: var(--glass-border);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      transition: all var(--transition-timing);
+    }
+
+    .team-member:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(100,255,218,0.2);
+    }
+
+    .team-section:nth-child(even) .team-member {
+      flex-direction: row-reverse;
+    }
+
+    .image-container {
+      position: relative;
+      flex: 0 0 350px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .image-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, rgba(100,255,218,0.2), transparent);
+      transition: opacity var(--transition-timing);
+    }
+
+    .member-img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border: 2px solid var(--accent-color);
+      border-radius: 15px;
+      transition: all var(--transition-timing);
+    }
+
+    .member-img:hover {
+      transform: scale(1.08);
+    }
+
+    .content-container {
+      position: relative;
+      flex: 1;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 3em;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 2em;
+      color: var(--secondary-color);
+      margin-bottom: 25px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.9;
+      color: var(--text-color);
+      text-align: justify;
+    }
+
+    .welcome-section {
+      text-align: center;
+      padding: 120px 30px;
+      background: var(--glass-bg);
+      margin: 30px;
+      border-radius: 25px;
+      border: var(--glass-border);
+    }
+
+    .welcome-section h1 {
+      font-size: 4em;
+      color: var(--secondary-color);
+      margin-bottom: 35px;
+      font-weight: bold;
+    }
+
+    .welcome-section p {
+      font-size: 1.6em;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 2;
+      color: var(--text-color);
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-70px) rotateY(-20deg);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0) rotateY(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(-14px) rotateY(20deg); /* Changed from 70px to -14px */
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0) rotateY(0);
+      }
+    }
+
+    .team-section:nth-child(odd).visible .content-container > * {
+      animation: slideInLeft 1s var(--transition-timing) forwards;
+    }
+
+    .team-section:nth-child(even).visible .content-container > * {
+      animation: slideInRight 1s var(--transition-timing) forwards;
+    }
+
+    .visible .content-container h2 { animation-delay: 0.4s; }
+    .visible .content-container h3 { animation-delay: 0.7s; }
+    .visible .content-container p { animation-delay: 1s; }
+
+    @media (max-width: 1280px) {
+      .team-section {
+        padding: 50px 40px;
+        min-height: 90vh;
+      }
+
+      .team-member {
+        padding: 35px;
+        gap: 45px;
+      }
+
+      .welcome-section {
+        width: 70%;
+        left: 15%;
+      }
+
+      h2 { font-size: 2.8em; }
+      h3 { font-size: 2em; }
+      p { font-size: 1.3em; }
+    }
+
+    @media (max-width: 1024px) {
+      .team-section {
+        padding: 40px 30px;
+        min-height: 80vh;
+      }
+
+      .team-member {
+        padding: 30px;
+        gap: 40px;
+        flex-wrap: wrap;
+        backdrop-filter: blur(10px);
+      }
+
+      .welcome-section {
+        width: 80%;
+        left: 10%;
+        padding: 1.5rem 1rem;
+      }
+
+      .welcome-section h1 {
+        font-size: 1.8rem;
+      }
+
+      .welcome-section p {
+        font-size: 0.8rem;
+        max-width: 350px;
+      }
+
+      .image-container {
+        transition: transform 0.3s ease;
+      }
+
+      .image-container:hover {
+        transform: scale(1.02);
+      }
+
+      h2 { 
+        font-size: 2.5em;
+        background: linear-gradient(120deg, black, black);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h3 { font-size: 1.8em; }
+      p { font-size: 1.2em; }
+    }
+
+    @media (max-width: 768px) {
+      .team-section {
+        padding: 30px 20px;
+        min-height: 70vh;
+      }
+
+      .team-member {
+        flex-direction: column !important;
+        gap: 30px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.98);
+      }
+
+      .welcome-section {
+        width: 90%;
+        left: 5%;
+        padding: 1rem 0.8rem;
+        backdrop-filter: blur(15px);
+      }
+
+      .welcome-section h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .welcome-section p {
+        font-size: 0.7rem;
+        max-width: 300px;
+      }
+
+      .image-container {
+        flex: 0 0 250px;
+        width: 100%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      }
+
+      .member-img {
+        height: 250px;
+        transition: transform 0.4s ease;
+      }
+
+      .member-img:hover {
+        transform: scale(1.05);
+      }
+
+      .content-container {
+        text-align: center;
+        padding: 20px 15px;
+      }
+
+      h2 { 
+        font-size: 2.2em;
+        margin-bottom: 10px;
+      }
+      h3 { 
+        font-size: 1.6em;
+        color: black;
+      }
+      p { 
+        font-size: 1.1em;
+        text-align: center;
+        line-height: 1.6;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .team-section {
+        padding: 20px 15px;
+        min-height: 60vh;
+      }
+
+      .team-member {
+        padding: 20px;
+        gap: 25px;
+      }
+
+      .welcome-section {
+        width: 95%;
+        left: 2.5%;
+        padding: 0.8rem 0.5rem;
+      }
+
+      .image-container {
+        flex: 0 0 200px;
+      }
+
+      .member-img {
+        height: 200px;
+      }
+
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.4em; }
+      p { font-size: 1em; }
+    }
+</style>
+</style>
+</body>
+</html>

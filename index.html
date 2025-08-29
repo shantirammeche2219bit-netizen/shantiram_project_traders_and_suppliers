@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAA Baishnavi Traders And Suppliers</title>
+    <!-- Tailwind CSS CDN for modern, utility-first styling -->
+    
+            <link rel="stylesheet" href="style_css/style.css">
+            <link rel="stylesheet" href="style_css/sliding.css">
+            <link rel="stylesheet" href="style_css/water.css"> 
+            <link rel="stylesheet" href="style_css/snow.css">
+            <link rel="stylesheet" href="style_css/title.css">
+            <link rel="stylesheet" href="style_css/human.css">
+            <script src="style_js/img.js"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <script src="style_js/water.js"></script>
+            <script src="style_js/style.js"></script>
+    
+</head>
+<body class="bg-[#1a1a2e] min-h-screen">
+   
+    <nav class="bg-[#242440]/60 shadow-md rounded-b-xl p-4">
+        <div class="container mx-auto flex justify-between items-center">
+
+            <!-- Logo Section -->
+            <div class="flex-shrink-0 ml-0">
+                <a href="#" class="text-2xl font-bold">
+                  <img src="logo.png" alt="Company Logo"> 
+                </a>
+            </div>
+            <p class="slogan ml-0"><span class="Quality">Your Partner For </span> A Quality Home </p>
+            <!-- Desktop Navigation Menu -->
+            <ul id="desktop-nav" class="hidden md:flex items-center space-x-6 text-[#e0e0e0] font-medium">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Service</a></li>
+                <li><a href="#" class="nav-link">Product</a></li>
+                <li><a href="#" class="nav-link">Contact Us</a></li>
+                <li><a href="#" class="nav-link">Teams</a></li>
+                <li><a href="blog.html" class="nav-link">About Us</a></li>
+            </ul>
+
+            <!-- Mobile-only Elements: About Us, "Menu" Text, and Hamburger Menu Icon -->
+            <div class="flex items-center md:hidden space-x-4">
+                <a href="#" class="text-sm font-medium text-[#e0e0e0] hover:text-[#ffffff] transition-colors duration-300">About Us</a>
+                <!-- Added "Menu" text here -->
+                <span class="text-sm font-medium text-[#e0e0e0]">Menu</span>
+                <button id="menu-button" class="focus:outline-none">
+                    <div class="hamburger-icon" id="hamburger">
+                        <span class="a"></span>
+                        <span class="b"></span>
+                        <span class="c"></span>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Mobile Menu - This is initially hidden and slides in from the right -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-64 p-6 transform translate-x-full mobile-menu md:hidden ">
+        <div class="flex justify-end">
+            <!-- Close button for the mobile menu -->
+            <button id="close-menu-button" class="text-[#4b5563] hover:text-[#1f2937] focus:outline-none">
+                <!-- X icon as an SVG for better styling -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Links with individual rectangles -->
+        <div id="mobile-menu-links" class="flex flex-col space-y-4 mt-8">
+            <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Home</a></div>
+            <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Service</a></div>
+            <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Product</a></div>
+            <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Contact Us</a></div>
+            <div class="mobile-menu-item"><a href="#" class="block w-full h-full flex items-center justify-center">Team</a></div>
+            <div class="mobile-menu-item"><a href="blog.html" class="block w-full h-full flex items-center justify-center">About Us</a></div>
+        </div>
+    </div>
+
+    <!-- Backdrop overlay for the mobile menu -->
+    <div id="backdrop" class="fixed inset-0 z-40 hidden backdrop md:hidden"></div>
+
+
+
+<div class="flex flex-col min-h-screen">
+    <div class="title-container flex flex-col items-center justify-center min-h-[70vh] relative overflow-hidden">
+        <div class="title-content relative z-10">
+            <h1 class="company-name text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent animate-shimmer">
+                MAA BAISHNAVI
+            </h1>
+            <p class="company-tagline text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 font-serif tracking-wider text-[#DEB887] opacity-0 animate-fadeIn">
+                Traders & Suppliers
+            </p>
+            <button class="mt-8 px-8 py-3 bg-[#DEB887] hover:bg-[#DEB887]/80 text-[#1a1a2e] rounded-full font-medium text-lg transition-all duration-300 transform hover:scale-105 opacity-0 animate-fadeIn">
+                Explore Products
+            </button>
+        </div>
+        <div class="decorative-line w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#DEB887] to-transparent mt-8 opacity-0 animate-expandLine"></div>
+    </div>
+
+    <!-- Train-like Image Slider Section -->
+     
+    <div class="text-slider-box fixed bottom-0 w-full h-32 overflow-hidden backdrop-blur-[2px]">
+        <div class="text-container relative w-full h-full flex items-center bg-transparent">
+            <div class="slider-track flex animate-infinite-scroll">
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Premium Bathtubs</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Luxury for your bathroom</p>
+                    </div>
+                </div>
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Modern Taps</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Elegant & Durable</p>
+                    </div>
+                </div>
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Designer Basins</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Contemporary Style</p>
+                    </div>
+                </div>
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Quality Fixtures</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Built to Last</p>
+                    </div>
+                </div>
+                <!-- Duplicate slides for seamless infinite loop -->
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Premium Bathtubs</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Luxury for your bathroom</p>
+                    </div>
+                </div>
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Modern Taps</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Elegant & Durable</p>
+                    </div>
+                </div>
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Designer Basins</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Contemporary Style</p>
+                    </div>
+                </div>
+                <div class="slide-item flex items-center justify-center min-w-[250px] p-2">
+                    <div class="text-content text-center p-3 rounded-lg hover:scale-110 transition-transform duration-300 ease-out w-[200px] group bg-transparent">
+                        <h3 class="text-xl font-bold text-[#ffffff]/70 animate-float-infinite truncate group-hover:truncate-none">Quality Fixtures</h3>
+                        <p class="text-[#e0e0e0]/60 mt-1 animate-fade-infinite truncate group-hover:truncate-none">Built to Last</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-[#1a1a2e]/50 to-transparent"></div>
+        <div class="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-[#1a1a2e]/50 to-transparent"></div>
+    </div>
+</div>
+
+
+</div>
+    <!-- Animated Human Waving Character with Welcome Text -->
+    <div id="welcome-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md">
+        <div class="welcome-container text-center">
+            <div class="human scale-150 mb-8">
+                 
+                <div class="head"><img src="logo.png" alt=""></div>
+                <div class="arm-right">👋</div>
+                <style>
+                    .arm-right {
+                        left: -20%;
+                        top: -20%;
+                    }
+                </style>
+            </div>
+            <h1 class="text-[#ffffff] text-6xl font-bold welcome-message mb-4">Welcome!</h1>
+            <p class="text-white/80 text-xl font-serif tracking-wider animate-pulse">
+                Welcome to <span class="text-[#ffffff] font-bold">Maa Baishnavi Traders</span> - 
+                <span class="italic text-yellow-200/80">Where Quality Meets Excellence!</span>
+            </p>
+        </div>
+    </div>
+<canvas id="waterCanvas"></canvas>
+</body>
+</html>

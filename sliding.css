@@ -1,0 +1,129 @@
+@keyframes infinite-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes float-infinite {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes fade-infinite {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+}
+
+.animate-infinite-scroll {
+    animation: infinite-scroll 30s linear infinite;
+}
+
+.animate-float-infinite {
+    animation: float-infinite 3s ease-in-out infinite;
+}
+
+.animate-fade-infinite {
+    animation: fade-infinite 4s ease-in-out infinite;
+}
+
+.text-slider-box {
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.02);
+}
+
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+.text-content {
+    transition: all 0.3s ease-out;
+    z-index: 20;
+}
+
+.text-content:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 4px rgba(100, 255, 218, 0.1);
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.group:hover .truncate-none {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 0.8; transform: translateY(0); }
+}
+
+@keyframes expandLine {
+    from { width: 0; opacity: 0; }
+    to { width: 50%; opacity: 0.7; }
+}
+
+@keyframes train-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-shimmer {
+    animation: shimmer 3s linear infinite;
+    background-size: 200% auto;
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-expandLine {
+    animation: expandLine 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.animate-train-move {
+    animation: train-move 20s linear infinite;
+}
+
+.company-name {
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.company-tagline {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.train-slider-container {
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.03);
+    max-width: 1000px;
+}
+
+.train-track {
+    width: 100%;
+    overflow: hidden;
+}
+
+.train-cars {
+    display: flex;
+    gap: 0;
+}
+
+.train-car {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.train-car:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
